@@ -1,0 +1,46 @@
+@use "../utilities/mixins" as mi;
+
+// Layout
+$padding-sides: 1em;
+$container-bg: white;
+
+// header
+$header-height: 3.5em;
+$header-padding: 1em;
+$header-margin-bt: 3rem;
+
+// Menu
+$show-menu-bg: white;
+$show-cart-bg: #fff;
+
+$color-subtitle: #9c9999;
+
+// Center Textos
+$color-title: #ee7e00;
+$color-dsc: #fbe4c9;
+
+// Fuentes
+:root {
+  // Desktop
+  --h1-font-size: 2em;
+
+  // Mobile
+  @include mi.from(mobile) {
+    --h1-font-size: 1.6em;
+  }
+
+  --slider_height: 100%;
+  @include mi.from(mobile) {
+    --slider_height: 17.5rem;
+  }
+}
+
+// Slider
+$slider_margin-left: 3rem;
+
+// Capas
+:root {
+  --z-index-back: 50;
+  --z-index-front: 100;
+  --z-index-menu: 150;
+}

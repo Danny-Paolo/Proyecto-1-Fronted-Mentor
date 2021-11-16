@@ -1,0 +1,142 @@
+@use "../utilities/mixins" as mi;
+@use "../utilities/variables" as var;
+
+.description {
+  $paddingy: 1em;
+  $paddingx: 0.8em;
+  max-width: 85%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+
+  @include mi.from(mobile) {
+    margin-top: 1.2rem;
+    max-width: 100%;
+    padding: 0 var.$padding-sides;
+    gap: 1em;
+  }
+
+  &__mark {
+    color: var.$color-title;
+    font-weight: 800;
+    margin-bottom: 0.7rem;
+  }
+
+  &__text {
+    font-size: 1.1em;
+    font-weight: 550;
+    color: var.$color-subtitle;
+  }
+
+  &__price {
+    position: relative;
+
+    &-total {
+      font-weight: 800;
+    }
+
+    @include mi.from(mobile) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-dsc {
+      display: inline;
+      padding: 0.2em 0.45em;
+      background: var.$color-dsc;
+      margin-left: 1rem;
+      color: var.$color-title;
+      font-weight: 800;
+      border-radius: 0.3em;
+      text-align: center;
+      align-self: center;
+    }
+
+    &-croosOut {
+      margin-top: 0.5rem;
+      color: var.$color-subtitle;
+      text-decoration: line-through;
+    }
+
+    .flex {
+      display: flex;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    @include mi.from(mobile) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__icon {
+    width: 100%;
+    display: flex;
+    flex-shrink: 1.8;
+    justify-content: space-between;
+    background: #f2f2ff;
+    border-radius: 1.2em;
+    padding: $paddingy $paddingx;
+
+    & li {
+      align-self: center;
+      padding: 0;
+    }
+
+    &-minus img {
+      float: left;
+      cursor: pointer;
+    }
+
+    &-cantidad {
+      padding: 0;
+
+      text-align: center;
+      color: black;
+      font-weight: 900;
+    }
+
+    &-plus img {
+      float: right;
+      cursor: pointer;
+    }
+  }
+
+  &__btn-container {
+    width: 100%;
+  }
+
+  &__add {
+    width: 100%;
+    background: var.$color-title;
+    text-align: center;
+    padding: $paddingy $paddingx;
+    border-radius: 1.2em;
+    display: flex;
+    justify-content: center;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+
+    &:hover {
+      background: rgba(251, 165, 165, 0.896);
+    }
+  }
+
+  &__add::before {
+    content: url(/images/icon-cart.svg);
+    display: block;
+    margin-right: 0.8rem;
+  }
+}
+
+.dollar {
+  &::before {
+    content: "$";
+  }
+}

@@ -1,0 +1,38 @@
+@use "../utilities/mixins" as mi;
+@use "../utilities/variables" as var;
+
+// Muestra menu
+.showitems {
+  $side-left: 1.4rem;
+  background: var.$show-menu-bg;
+
+  @include mi.from(mobile) {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    max-width: 70vw;
+    width: 100%;
+    min-height: 100vh;
+    z-index: var(--z-index-menu);
+    gap: 0;
+
+    & li {
+      padding: 0em 0em 1em $side-left;
+      width: 100%;
+      height: auto;
+
+      a {
+        color: initial;
+        font-weight: 800;
+      }
+    }
+
+    .close {
+      display: block;
+      width: 0.8em;
+      margin: 1.5rem 0rem 2rem $side-left;
+      cursor: pointer;
+    }
+  }
+}

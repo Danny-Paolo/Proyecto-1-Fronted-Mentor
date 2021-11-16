@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | E-commerce product page</title>
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <section class="container hidemenu">
+      <header class="header">
+        <nav class="menu-main">
+          <div class="menu-main__toggle" id="toggle-menu"></div>
+          <h1 class="menu-main__title">Sneakers</h1>
+          <li class="close"></li>
+          <ul class="menu-main__links" id="links">
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="menu-icon">
+          <div id="show-cart" class="hide-cart">
+            <div class="show-cart__content">
+              <h2>Cart</h2>
+              <p id="empty" class="empty">Your cart is empty</p>
+              <div class="show-cart__buy" id="contentBuy"></div>
+            </div>
+          </div>
+          <div id="img-cart" class="menu-icon-child car">
+            <div id="cantCircle" class="circle"></div>
+            <img src="/images/icon-cart.svg" alt="" />
+          </div>
+          <div class="menu-icon-child user border">
+            <img src="/images/image-avatar.png" alt="" />
+          </div>
+        </div>
+      </header>
+      <main class="grid-container">
+        <section class="slider">
+          <div class="slider__main">
+            <img
+              class="slider__main__img"
+              id="main-img"
+              src="/images/image-product-1.jpg"
+              alt=""
+            />
+          </div>
+          <div class="slider__container show-slider">
+            <img src="/images/icon-next.svg" class="slider__arrow" id="next" />
+            <div class="slider__body slider__body--show" data-id="1">
+              <figure class="slider__body__picture">
+                <img src="/images/image-product-1.jpg" class="slider__img" />
+              </figure>
+            </div>
+            <div class="slider__body" data-id="2">
+              <figure class="slider__body__picture">
+                <img src="/images/image-product-2.jpg" class="slider__img" />
+              </figure>
+            </div>
+            <div class="slider__body" data-id="3">
+              <figure class="slider__body__picture">
+                <img src="/images/image-product-3.jpg" class="slider__img" />
+              </figure>
+            </div>
+            <div class="slider__body" data-id="4">
+              <figure class="slider__body__picture">
+                <img src="/images/image-product-4.jpg" class="slider__img" />
+              </figure>
+            </div>
+            <img
+              src="/images/icon-previous.svg"
+              class="slider__arrow"
+              id="previous"
+            />
+          </div>
+        </section>
+        <section class="description">
+          <div class="description__main">
+            <p class="description__mark">SNEAKER COMPANY</p>
+            <h1 id="mainTitle" class="description__title">
+              Fall Limited Edition Sneakers
+            </h1>
+          </div>
+          <p class="description__text">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div class="description__price">
+            <div class="flex">
+              <h1 id="priceProduct" class="description__price-total dollar">
+                125.00
+              </h1>
+              <p class="description__price-dsc">50%</p>
+            </div>
+            <p class="description__price-croosOut dollar">250.00</p>
+          </div>
+          <div class="description__buttons">
+            <div class="description__icon">
+              <li data-id="-" class="description__icon-minus" id="minus">
+                <img src="/images/icon-minus.svg" alt="" />
+              </li>
+              <li class="description__icon-cantidad" id="cantidad"></li>
+              <li data-id="+" class="description__icon-plus" id="plus">
+                <img src="/images/icon-plus.svg" alt="" />
+              </li>
+            </div>
+            <div class="description__btn-container">
+              <button id="btn_cart" class="description__add">
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </section>
+    <script src="/src/index.js"></script>
+  </body>
+</html>
